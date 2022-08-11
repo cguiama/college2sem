@@ -11,8 +11,8 @@ public class Patricando_Aula1 {
             op = entrada.nextInt();
             if (op == 5)
                 break;
-            if(op <1 || op>6){
-                System.out.println("Opção inválida");
+            if (op < 1 || op > 5) {
+                System.out.println("Opção inválida!");
                 continue;
             }
             System.out.println("Digite 2 números:");
@@ -30,13 +30,18 @@ public class Patricando_Aula1 {
                     System.out.println("Multiplicação = " + (n1 * n2));
                     break;
                 case 4:
-                    System.out.println("Divisão = " + (n1 / n2));
-                    break;
+                    if (n2 == 0) {
+                        System.out.println("NÃO FOI POSSÍVEL REALIZAR A OPERAÇÃO");
+                        continue;
+                    } else {
+                        System.out.println("Divisão = " + (n1 / n2));
+                        break;
+                    }
                 case 5:
                     System.out.println("Obrigado!");
                     break;
             }
-        }
 
+        }
     }
 }
